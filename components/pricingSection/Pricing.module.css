@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.panels {
+  width: 1300px;
+  height: 400px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.panel1,
+.panel2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 25px;
+  text-transform: uppercase;
+  width: 600px;
+  height: 400px;
+}
+.p {
+  text-align: center;
+}
+
+.panel1 {
+  background: linear-gradient(
+    0deg,
+    rgba(249, 179, 44, 0.76) 0%,
+    rgba(204, 204, 204, 0) 100%
+  );
+}
+.panel2 {
+  background: linear-gradient(360deg, #818181 0%, rgba(204, 204, 204, 0) 100%);
+}
+
+.price {
+  font-weight: bold;
+}
+
+.details {
+  width: 1300px;
+  font-size: 30px;
+}
+.details p {
+  line-height: 1.3;
+}

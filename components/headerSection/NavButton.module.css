@@ -1,0 +1,70 @@
+.primary {
+  width: 140px;
+  height: 40px;
+  font-size: 15px;
+  background-color: transparent;
+  border: 1px solid var(--secondary-color);
+  border-radius: 50px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.primary:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+.secondary {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  font-size: 18px;
+}
+
+.secondary::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--secondary-color);
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-in-out;
+}
+.secondary:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* when Scrolled*/
+.scrolled {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  font-size: 18px;
+}
+
+.scrolled::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-in-out;
+}
+.scrolled:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

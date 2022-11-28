@@ -1,0 +1,108 @@
+.container {
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 100px;
+}
+.title1 {
+  font-size: 35px;
+  text-transform: uppercase;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.panel {
+  width: 400px;
+  height: 450px;
+  background-color: #cccccc;
+  border-radius: 20px;
+  padding: 30px;
+  padding-top: 50px;
+}
+.contacts div {
+  display: flex;
+  line-height: 3px;
+}
+.contacts p {
+  margin-left: 10px;
+  font-size: 20px;
+}
+.contacts img {
+  width: 30px;
+}
+.title2 {
+  font-size: 25px;
+  text-transform: uppercase;
+}
+.socmed {
+  margin-top: 40px;
+}
+.socmed div {
+  display: flex;
+  gap: 10px;
+}
+.socmed img {
+  width: 40px;
+  cursor: pointer;
+}
+/* Form */
+.form {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+.form label {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.name input {
+  width: 220px;
+}
+.text {
+  margin-top: 10px;
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid black;
+  color: black;
+  text-decoration: none;
+  outline: none;
+  font-size: 15px;
+}
+.form label {
+  margin-top: 20px;
+}
+.message {
+  margin-top: 5px;
+  height: 200px;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  font-size: 15px;
+}
+.submit {
+  margin-top: 20px;
+  width: 100px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 100px;
+  background-color: #ffffff;
+  color: black;
+  font-size: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.submit:hover {
+  background-color: black;
+  color: white;
+}
+.submit:active {
+  background-color: rgb(74, 74, 74);
+}
+.name {
+  display: flex;
+  justify-content: space-between;
+}

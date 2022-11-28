@@ -1,0 +1,96 @@
+.container {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 1;
+  transition: all 0.4s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.214);
+}
+/*logo*/
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 3em;
+}
+.logo img {
+  width: 45px;
+}
+.logo h1 {
+  font-size: 40px;
+  color: var(--secondary-color);
+  margin: 0;
+  letter-spacing: 5px;
+  margin-left: 15px;
+}
+
+/* .logo p {
+  font-size: 15px;
+  margin: 0;
+  letter-spacing: 10px;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+} */
+/*navigation links*/
+.actions {
+  display: flex;
+  margin-right: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.actions ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  color: var(--secondary-color);
+}
+
+/* toggle theme*/
+.toggle {
+  background-color: var(--secondary-color);
+  width: 30px;
+  aspect-ratio: 1/1;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.toggle img {
+  border-radius: 100px;
+  width: 20px;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+}
+
+/* when scrolled*/
+.scrolled {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
+}
+.scrolled .logo h1 {
+  color: var(--primary-color);
+}
+.scrolled .logo p {
+  color: var(--primary-color);
+}
+.scrolled .actions ul {
+  color: var(--primary-color);
+}
+.scrolled .actions ul Button .secondary::after {
+  background-color: var(--primary-color);
+}
