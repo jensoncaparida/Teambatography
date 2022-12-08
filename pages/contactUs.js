@@ -3,7 +3,6 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Navbar from "../components/headerSection/NavBar";
 import ContactUs from "../components/contactUsSection/ContactUs";
-import Footer from "../components/footerSection/Footer";
 
 export default function Home() {
   return (
@@ -15,7 +14,6 @@ export default function Home() {
       </Head>
       <Navbar />
       <ContactUs />
-      <Footer />
     </div>
   );
 }
