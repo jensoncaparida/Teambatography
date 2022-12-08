@@ -6,6 +6,7 @@ export default function Pricing() {
     <div className={styles.container}>
       <div>
         <Image
+          className={styles.img}
           src="/pricing.png"
           width={1400}
           height={600}

@@ -1,12 +1,64 @@
 import styles from "./ContactUs.module.css";
 import Link from "next/link";
-import Image from "next/image";
+import { useForm } from "react-hook-form";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function ContactUs() {
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+    reset,
+  } = useForm();
+
+  const onSubmit = async (data) => {
+    const config = fetch("http://localhost:3000/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    try {
+      const response = await config;
+      if (response.status == 200) {
+        reset();
+        toast.success("Your email was sent, successfully!", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   return (
     <div className={styles.container}>
+      <div className={styles.notify}>
+        <div></div>
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          q
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss={false}
+          draggable
+          pauseOnHover
+          theme="light"
+        />
+      </div>
       <div className={styles.info}>
-        <p className={styles.title1}>Get In Touch</p>
         <div className={styles.panel}>
           <div className={styles.contacts}>
             <div>
@@ -38,37 +90,65 @@ export default function ContactUs() {
           </div>
         </div>
       </div>
-      <div className={styles.form}>
-        <div className={styles.name}>
-          <div>
-            <label htmlFor="fname">First Name</label>
-            <br />
-            <input
-              className={styles.text}
-              type="text"
-              id="fname"
-              name="fname"
-            />
-          </div>
-          <div>
-            <label htmlFor="lname">Last Name</label>
-            <br />
-            <input
-              className={styles.text}
-              type="text"
-              id="lname"
-              name="lname"
-            />
-          </div>
+      <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+        <p className={styles.title1}>Get In Touch</p>
+        <div>
+          <label htmlFor="name">Name</label>
+          <input
+            {...register("name", { required: true })}
+            aria-invalid={errors.name ? "true" : "false"}
+            className={styles.text}
+          />
+          {errors.name?.type === "required" && (
+            <p className={styles.alert} role="alert">
+              Name is required
+            </p>
+          )}
         </div>
-        <label htmlFor="email">Email</label>
-        <input className={styles.text} type="text" id="email" name="email" />
-        <label htmlFor="subject">Subject</label>
-        <input className={styles.text} id="subject" name="subject" />
-        <label htmlFor="message">Message</label>
-        <textarea className={styles.message} id="message" name="message" />
-        <input className={styles.submit} type="submit" value="Submit"></input>
-      </div>
+
+        <div>
+          <label htmlFor="email">Email</label>
+          <input
+            {...register("email", { required: true })}
+            aria-invalid={errors.email ? "true" : "false"}
+            className={styles.text}
+          />
+          {errors.email?.type === "required" && (
+            <p className={styles.alert} role="alert">
+              Email is required
+            </p>
+          )}
+        </div>
+
+        <div>
+          <label htmlFor="subject">Subject</label>
+          <input
+            {...register("subject", { required: true })}
+            aria-invalid={errors.subject ? "true" : "false"}
+            className={styles.text}
+          />
+          {errors.subject?.type === "required" && (
+            <p className={styles.alert} role="alert">
+              Subject is required
+            </p>
+          )}
+        </div>
+
+        <div>
+          <label htmlFor="message">Message</label>
+          <textarea
+            {...register("message", { required: true })}
+            aria-invalid={errors.message ? "true" : "false"}
+            className={styles.message}
+          />
+          {errors.message?.type === "required" && (
+            <p className={styles.alert} role="alert">
+              Message is required
+            </p>
+          )}
+        </div>
+        <input className={styles.submit} type="submit"></input>
+      </form>
     </div>
   );
 }

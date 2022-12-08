@@ -7,7 +7,8 @@
   position: fixed;
   z-index: 1;
   transition: all 0.4s ease-in-out;
-  background-color: rgba(0, 0, 0, 0.214);
+  background-color: var(--secondary-color);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 }
 /*logo*/
 .logo {
@@ -15,13 +16,14 @@
   flex-direction: row;
   align-items: center;
   margin-left: 3em;
+  z-index: 99;
 }
 .logo img {
   width: 45px;
 }
 .logo h1 {
   font-size: 40px;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   margin: 0;
   letter-spacing: 5px;
   margin-left: 15px;
@@ -35,7 +37,7 @@
   text-transform: uppercase;
 } */
 /*navigation links*/
-.actions {
+.navDesktop {
   display: flex;
   margin-right: 5em;
   display: flex;
@@ -44,16 +46,19 @@
   gap: 40px;
 }
 
-.actions ul {
+.nav {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 60px;
-  color: var(--secondary-color);
+  color: var(--primary-color);
+}
+.nav li {
+  list-style: none;
 }
 
 /* toggle theme*/
-.toggle {
+/* .toggle {
   background-color: var(--secondary-color);
   width: 30px;
   aspect-ratio: 1/1;
@@ -67,30 +72,146 @@
   width: 20px;
   aspect-ratio: 1/1;
   cursor: pointer;
+} */
+
+/* mobile setup */
+.hamburger {
+  display: none;
+}
+.active {
+  display: none;
 }
 
-/* when scrolled*/
-.scrolled {
+.navMobile {
+  padding-top: 2em;
+  z-index: 1;
+  position: fixed;
+  top: -100%;
   width: 100%;
-  height: 70px;
+  height: 310px;
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+}
+.navMobile .nav {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 60vh;
+  text-align: center;
+  gap: 1px;
+  margin-top: 1.7em;
+  box-shadow: inset 0px 11px 8px -10px #ccc;
+}
+.navMobile .nav li {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  z-index: 1;
-  background-color: white;
-  transition: all 0.2s ease-in-out;
-  box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }
-.scrolled .logo h1 {
-  color: var(--primary-color);
+.navMobile .nav li:active {
+  background-color: gray;
 }
-.scrolled .logo p {
-  color: var(--primary-color);
+.navMobile .nav li button:hover::after {
+  display: none;
 }
-.scrolled .actions ul {
-  color: var(--primary-color);
-}
-.scrolled .actions ul Button .secondary::after {
-  background-color: var(--primary-color);
+/*  */
+/* Mobile Layout */
+@media only screen and (max-width: 768px) {
+  .navDesktop {
+    display: none;
+  }
+  .container {
+    height: 60px;
+  }
+  .logo {
+    margin-left: 2em;
+  }
+  .logo img {
+    width: 40px;
+  }
+  .logo h1 {
+    font-size: 35px;
+  }
+
+  /* when scrolled*/
+  .scrolled {
+    height: 60px;
+  }
+
+  .hamburger {
+    margin-right: 1em;
+    position: relative;
+    display: block;
+    width: 40px;
+    cursor: pointer;
+
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    z-index: 99;
+  }
+
+  .hamburger .bar,
+  .hamburger:after,
+  .hamburger:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 6px 0px;
+    transition: 0.4s;
+    border-radius: 5px;
+  }
+
+  .active {
+    position: relative;
+    display: block;
+    width: 30px;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    margin-right: 1em;
+    z-index: 99;
+  }
+  .active .bar,
+  .active::after,
+  .active::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 6px 0px;
+    transition: 0.4s;
+    border-radius: 5px;
+  }
+
+  .active .bar {
+    transform: translateX(-80px);
+    opacity: 0;
+    transition: all 0.5s;
+  }
+  .active::before {
+    transform: rotate(-45deg) translate(-8px, 5px);
+  }
+  .active::after {
+    transform: rotate(45deg) translate(-9px, -6px);
+  }
+
+  .navMobile {
+    top: 0;
+    transition: all 1s ease-in-out;
+  }
 }

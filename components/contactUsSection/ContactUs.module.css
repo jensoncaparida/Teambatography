@@ -1,9 +1,11 @@
 .container {
-  padding-top: 100px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding-bottom: 100px;
+}
+.notify {
+  position: absolute;
 }
 .title1 {
   font-size: 35px;
@@ -13,13 +15,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 .panel {
-  width: 400px;
+  width: 30vw;
   height: 450px;
   background-color: #cccccc;
   border-radius: 20px;
-  padding: 30px;
+  padding-left: 30px;
   padding-top: 50px;
 }
 .contacts div {
@@ -31,7 +34,7 @@
   font-size: 20px;
 }
 .contacts img {
-  width: 30px;
+  width: 25px;
 }
 .title2 {
   font-size: 25px;
@@ -50,17 +53,25 @@
 }
 /* Form */
 .form {
-  width: 500px;
+  width: 30vw;
   display: flex;
   flex-direction: column;
   margin-top: 100px;
+  gap: 20px;
 }
+.form div {
+  display: flex;
+  flex-direction: column;
+}
+.alert {
+  color: red;
+  margin: 0;
+  margin-top: 10px;
+}
+
 .form label {
   text-transform: uppercase;
   font-size: 20px;
-}
-.name input {
-  width: 220px;
 }
 .text {
   margin-top: 10px;
@@ -71,9 +82,6 @@
   text-decoration: none;
   outline: none;
   font-size: 15px;
-}
-.form label {
-  margin-top: 20px;
 }
 .message {
   margin-top: 5px;
@@ -94,6 +102,7 @@
   font-size: 18px;
   text-transform: uppercase;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 .submit:hover {
   background-color: black;
@@ -102,7 +111,40 @@
 .submit:active {
   background-color: rgb(74, 74, 74);
 }
-.name {
-  display: flex;
-  justify-content: space-between;
+
+/* Mobile Layout */
+@media only screen and (max-width: 768px) {
+  .container {
+    display: grid;
+    flex-direction: column;
+  }
+  .container .form {
+    grid-row-start: 1;
+    width: 90vw;
+  }
+  .info {
+    margin-top: 50px;
+  }
+  .panel {
+    width: 80vw;
+  }
+  .contacts p {
+    font-size: 1.1em;
+  }
+  .title2 {
+    font-size: 1.3em;
+  }
+  .socmed img {
+    width: 30px;
+    cursor: pointer;
+  }
+  .submit:hover {
+    background-color: white;
+    color: black;
+  }
+  .submit:active {
+    background-color: black;
+    color: #ffffff;
+    outline: none;
+  }
 }

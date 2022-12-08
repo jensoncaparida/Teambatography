@@ -20,7 +20,7 @@ export default function Footer() {
         </div>
       </div>
       <div className={styles.socmed}>
-        <p className={styles.title}>Follow Us On:</p>
+        <p className={styles.title}>Follow Us On</p>
         <div>
           <Link href="https://www.facebook.com/" target="_blank">
             <img src="facebook.svg" />

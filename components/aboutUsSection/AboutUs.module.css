@@ -11,6 +11,7 @@
   flex-direction: column;
   justify-content: center;
   width: 700px;
+  margin-left: 2em;
 }
 .details h1 {
   text-align: center;
@@ -25,4 +26,18 @@
 .details p {
   font-size: 30px;
   margin-left: 20px;
+}
+
+/* Mobile Layout */
+@media only screen and (max-width: 768px) {
+  .gif {
+    display: none;
+  }
+  .details {
+    margin: 0;
+    width: 90vw;
+  }
+  .details p {
+    font-size: 25px;
+  }
 }

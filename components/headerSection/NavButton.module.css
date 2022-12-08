@@ -8,6 +8,7 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: 0.3s;
+  margin-top: 50px;
 }
 .primary:hover {
   background-color: var(--secondary-color);
@@ -17,11 +18,15 @@
 .secondary {
   margin: 0;
   padding: 0;
-  list-style: none;
   text-transform: uppercase;
   cursor: pointer;
   position: relative;
   font-size: 18px;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  color: var(--primary-color);
 }
 
 .secondary::after {
@@ -32,7 +37,7 @@
   height: 1px;
   bottom: 0;
   left: 0;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   transform-origin: bottom right;
   transition: transform 0.5s ease-in-out;
 }
@@ -42,7 +47,7 @@
 }
 
 /* when Scrolled*/
-.scrolled {
+/* .scrolled {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -50,6 +55,10 @@
   cursor: pointer;
   position: relative;
   font-size: 18px;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
 }
 
 .scrolled::after {
@@ -67,4 +76,12 @@
 .scrolled:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+} */
+/* Mobile Layout */
+@media only screen and (max-width: 768px) {
+  .primary {
+    width: 110px;
+    height: 35px;
+    font-size: 13px;
+  }
 }

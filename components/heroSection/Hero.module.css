@@ -1,21 +1,13 @@
 .container {
   position: relative;
   height: 100vh;
+  width: 100%;
   display: flex;
   align-items: center;
 }
-/* .container Image {
-  height: 85vh;
-  width: 100%;
+.heroImage {
   object-fit: cover;
-  object-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: var(--secondary-color);
-  position: absolute;
-} */
-
+}
 .info {
   position: absolute;
   margin-left: 5em;
@@ -23,15 +15,54 @@
 .info h1 {
   margin: 0;
   color: var(--secondary-color);
-  font-size: 70px;
+  font-size: 80px;
 }
 .info p {
   margin-top: 10px;
-  width: 500px;
+  width: 550px;
   color: var(--secondary-color);
-  font-size: 25px;
+  font-size: 30px;
   line-height: 30px;
 }
-.info Button {
+
+.button {
+  width: 140px;
+  height: 40px;
+  font-size: 15px;
+  background-color: transparent;
+  border: 1px solid var(--secondary-color);
+  border-radius: 50px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
   margin-top: 50px;
+}
+.button:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+
+/* Mobile Layout */
+@media only screen and (max-width: 768px) {
+  .container {
+    height: 80vh;
+  }
+  .info {
+    margin-left: 2em;
+  }
+  .info h1 {
+    margin: 0;
+    color: var(--secondary-color);
+    font-size: 50px;
+  }
+  .info p {
+    width: 400px;
+    color: var(--secondary-color);
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .button {
+    margin-top: 40px;
+  }
 }
