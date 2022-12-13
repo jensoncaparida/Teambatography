@@ -1,5 +1,4 @@
 import styles from "./AboutUs.module.css";
-import Link from "next/link";
 import Image from "next/image";
 
 export default function AboutUs() {
@@ -20,7 +19,13 @@ export default function AboutUs() {
         </div>
       </div>
       <div className={styles.gif}>
-        <Image src="/aboutUs.gif" width={500} height={400} quality={100} />
+        <Image
+          src="/aboutUs.gif"
+          alt="gif-about"
+          width={500}
+          height={400}
+          quality={100}
+        />
       </div>
     </div>
   );
