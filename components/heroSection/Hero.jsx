@@ -1,5 +1,4 @@
 import styles from "./Hero.module.css";
-import Button from "../headerSection/NavButton";
 import Link from "next/link";
 import Image from "next/image";
 

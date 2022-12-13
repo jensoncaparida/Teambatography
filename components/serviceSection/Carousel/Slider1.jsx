@@ -37,13 +37,13 @@ export default function Silder1(props) {
           className={styles.prev}
           onClick={() => setSlideIndex((count) => loop(count - 1))}
         >
-          <img src="/prev.svg" alt="" />
+          <Image src="/prev.svg" alt="prev-icon" width={15} height={15} />
         </button>
         <button
           className={styles.next}
           onClick={() => setSlideIndex((count) => loop(count + 1))}
         >
-          <img src="/next.svg" alt="" />
+          <Image src="/next.svg" alt="next-icon" width={15} height={15} />
         </button>
         <Image
           className={styles.img}

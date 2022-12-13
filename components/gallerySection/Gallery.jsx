@@ -11,6 +11,7 @@ export default function Gallery() {
             <Image
               className={styles.img1}
               src="/gallery/calm.png"
+              alt="img-calm"
               width={300}
               height={400}
             />
@@ -20,6 +21,7 @@ export default function Gallery() {
             <Image
               className={styles.img1}
               src="/gallery/badminton.png"
+              alt="img-badminton"
               width={300}
               height={400}
             />
@@ -29,6 +31,7 @@ export default function Gallery() {
             <Image
               className={styles.img1}
               src="/gallery/aestetic.png"
+              alt="img-aestetic"
               width={300}
               height={400}
             />
@@ -38,6 +41,7 @@ export default function Gallery() {
             <Image
               className={styles.img2}
               src="/gallery/landscape.png"
+              alt="img-landscape"
               width={970}
               height={500}
             />
@@ -47,6 +51,7 @@ export default function Gallery() {
             <Image
               className={styles.img1}
               src="/gallery/basketball.png"
+              alt="img-basketball"
               width={300}
               height={400}
             />
@@ -56,6 +61,7 @@ export default function Gallery() {
             <Image
               className={styles.img1}
               src="/gallery/vintage.png"
+              alt="img-vintage"
               width={300}
               height={400}
             />
@@ -65,6 +71,7 @@ export default function Gallery() {
             <Image
               className={styles.img1}
               src="/gallery/dark.png"
+              alt="img-dark"
               width={300}
               height={400}
             />
@@ -74,6 +81,7 @@ export default function Gallery() {
             <Image
               className={styles.img2}
               src="/gallery/wedding.png"
+              alt="img-wedding"
               width={1000}
               height={600}
             />

@@ -2,6 +2,7 @@ import Button from "./NavButton";
 import styles from "./NavBar.module.css";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isClicked, setisClicked] = useState(false);
@@ -9,7 +10,7 @@ export default function Navbar() {
   return (
     <div className={styles.container}>
       <div className={styles.logo}>
-        <img src="logo.svg" alt="" />
+        <Image src="/logo.svg" alt="logo" width={45} height={45} />
         <h1>TEAMBA</h1>
         {/* <p>Photography</p> */}
       </div>

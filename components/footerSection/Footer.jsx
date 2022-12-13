@@ -1,5 +1,6 @@
 import styles from "./Footer.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -7,15 +8,20 @@ export default function Footer() {
       <div className={styles.contacts}>
         <p className={styles.title}>Contact Details</p>
         <div>
-          <img src="email.svg" />
+          <Image src="/email.svg" alt="email-icon" width={40} height={40} />
           <p>Teambatography@gmail.com</p>
         </div>
         <div>
-          <img src="phone.svg" />
+          <Image src="/phone.svg" alt="phone-icon" width={40} height={40} />
           <p>489-9897</p>
         </div>
         <div>
-          <img src="location.svg" />
+          <Image
+            src="/location.svg"
+            alt="location-icon"
+            width={40}
+            height={40}
+          />
           <p>Imus city, Cavite, Philippines</p>
         </div>
       </div>
@@ -23,13 +29,28 @@ export default function Footer() {
         <p className={styles.title}>Follow Us On</p>
         <div>
           <Link href="https://www.facebook.com/" target="_blank">
-            <img src="facebook.svg" />
+            <Image
+              src="/facebook.svg"
+              alt="facebook-icon"
+              width={40}
+              height={40}
+            />
           </Link>
           <Link href="https://www.instagram.com/" target="_blank">
-            <img src="instagram.svg" />
+            <Image
+              src="/instagram.svg"
+              alt="instagram-icon"
+              width={40}
+              height={40}
+            />
           </Link>
           <Link href="https://www.twitter.com/" target="_blank">
-            <img src="twitter.svg" />
+            <Image
+              src="/twitter.svg"
+              alt="twitter-icon"
+              width={40}
+              height={40}
+            />
           </Link>
         </div>
       </div>

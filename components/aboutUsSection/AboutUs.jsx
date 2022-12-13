@@ -20,13 +20,7 @@ export default function AboutUs() {
         </div>
       </div>
       <div className={styles.gif}>
-        <Image
-          src="/aboutUs.gif"
-          width={500}
-          height={400}
-          objectFit="cover"
-          quality={100}
-        />
+        <Image src="/aboutUs.gif" width={500} height={400} quality={100} />
       </div>
     </div>
   );

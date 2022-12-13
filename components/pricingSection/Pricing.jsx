@@ -8,9 +8,9 @@ export default function Pricing() {
         <Image
           className={styles.img}
           src="/pricing.png"
+          alt="img-pricing"
           width={1400}
           height={600}
-          objectFit="cover"
           quality={100}
         />
       </div>
