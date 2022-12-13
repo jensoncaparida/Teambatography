@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Image from "next/image";
-
 export default function ContactUs() {
   const {
     register,
@@ -16,10 +15,11 @@ export default function ContactUs() {
   const onSubmit = async (data) => {
     const config = fetch("https://teambatography.vercel.app/contactUs", {
       method: "POST",
-      mode: "cors",
+      mode: "no-cors",
       headers: {
         "Content-Type": "application/json",
       },
+
       body: JSON.stringify(data),
     });
     try {
