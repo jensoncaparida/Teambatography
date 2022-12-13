@@ -13,10 +13,11 @@ export default function ContactUs() {
   } = useForm();
 
   const onSubmit = async (data) => {
-    const config = fetch("https://teambatography.vercel.app/api/contact", {
+    const config = fetch("/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        Accept: "application/json",
       },
 
       body: JSON.stringify(data),
