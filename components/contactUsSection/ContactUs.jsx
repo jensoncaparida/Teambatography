@@ -15,7 +15,6 @@ export default function ContactUs() {
   const onSubmit = async (data) => {
     const config = fetch("https://teambatography.vercel.app/api/contact", {
       method: "POST",
-      mode: "cors",
       headers: {
         "Content-Type": "application/json",
       },
