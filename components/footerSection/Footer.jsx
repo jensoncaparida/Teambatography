@@ -8,19 +8,19 @@ export default function Footer() {
       <div className={styles.contacts}>
         <p className={styles.title}>Contact Details</p>
         <div>
-          <Image src="/email.svg" alt="email-icon" width={40} height={40} />
+          <Image src="/email.svg" alt="email-icon" width={35} height={35} />
           <p>Teambatography@gmail.com</p>
         </div>
         <div>
-          <Image src="/phone.svg" alt="phone-icon" width={40} height={40} />
+          <Image src="/phone.svg" alt="phone-icon" width={35} height={35} />
           <p>489-9897</p>
         </div>
         <div>
           <Image
             src="/location.svg"
             alt="location-icon"
-            width={40}
-            height={40}
+            width={35}
+            height={35}
           />
           <p>Imus city, Cavite, Philippines</p>
         </div>

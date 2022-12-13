@@ -1,11 +1,8 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 const nodemailer = require("nodemailer");
-const cors = require("cors");
 export default async function handler(req, res) {
   const { name, email, subject, message } = req.body;
-
-  nodemailer.use(cors());
 
   const transporter = nodemailer.createTransport({
     service: "gmail",

@@ -14,8 +14,9 @@ export default function ContactUs() {
   } = useForm();
 
   const onSubmit = async (data) => {
-    const config = fetch("http://localhost:3000/api/contact", {
+    const config = fetch("https://teambatography.vercel.app/contactUs", {
       method: "POST",
+      mode: "cors",
       headers: {
         "Content-Type": "application/json",
       },
@@ -49,7 +50,6 @@ export default function ContactUs() {
           position="top-center"
           autoClose={5000}
           hideProgressBar={false}
-          q
           newestOnTop={false}
           closeOnClick
           rtl={false}
@@ -63,19 +63,19 @@ export default function ContactUs() {
         <div className={styles.panel}>
           <div className={styles.contacts}>
             <div>
-              <Image src="/email.svg" alt="email-icon" width={40} height={40} />
+              <Image src="/email.svg" alt="email-icon" width={35} height={35} />
               <p>Teambatography@gmail.com</p>
             </div>
             <div>
-              <Image src="/phone.svg" alt="phone-icon" width={40} height={40} />
+              <Image src="/phone.svg" alt="phone-icon" width={35} height={35} />
               <p>489-9897</p>
             </div>
             <div>
               <Image
                 src="/location.svg"
                 alt="location-icon"
-                width={40}
-                height={40}
+                width={35}
+                height={35}
               />
               <p>Imus city, Cavite, Philippines</p>
             </div>
