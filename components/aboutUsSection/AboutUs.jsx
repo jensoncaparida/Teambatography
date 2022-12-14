@@ -24,6 +24,7 @@ export default function AboutUs() {
           alt="gif-about"
           width={500}
           height={400}
+          quality={20}
           priority
         />
       </div>
